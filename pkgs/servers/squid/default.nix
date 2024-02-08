@@ -6,43 +6,68 @@
 
 stdenv.mkDerivation rec {
   pname = "squid";
-  version = "5.9";
+  version = "6.7";
 
   src = fetchurl {
-    url = "http://www.squid-cache.org/Versions/v5/${pname}-${version}.tar.xz";
-    hash = "sha256-P+XCAH2idXRGr5G275dPFUsggSCpo5OW6mgeXEq7BLU=";
+    url = "http://www.squid-cache.org/Versions/v6/${pname}-${version}.tar.xz";
+    hash = "sha256-00000000";
   };
 
   patches = [
     (fetchpatch {
-      name = "CVE-2023-46847.patch";
-      url = "http://www.squid-cache.org/Versions/v5/SQUID-2023_3.patch";
-      hash = "sha256-ofY9snWOsfHTCZcK7HbsLD0j5nP+O0eitWU4fK/mSqA=";
+      name = "SQUID-2023_1.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_1.patch";
+      hash = "sha256-0000000";
     })
     (fetchpatch {
-      name = "CVE-2023-50269.patch";
-      url = "http://www.squid-cache.org/Versions/v5/SQUID-2023_10.patch";
-      hash = "sha256-xa81wd2WAUboUhMpDcsj33sKoIzPF00tZDY/pw76XYQ=";
+      name = "SQUID-2023_2.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_2.patch";
+      hash = "sha256-000000000";
     })
     (fetchpatch {
-      name = "CVE-2023-49285.patch";
-      url = "http://www.squid-cache.org/Versions/v5/SQUID-2023_7.patch";
-      hash = "sha256-G6DZhHCfzoIb+q+sw0a5cMF6rSvrLhT7ntp0KiiCVSA=";
+      name = "SQUID-2023_2_b.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_2_b.patch";
+      hash = "sha256-000000000";
     })
     (fetchpatch {
-      name = "CVE-2023-46848.patch";
-      url = "http://www.squid-cache.org/Versions/v5/SQUID-2023_5.patch";
-      hash = "sha256-aduHoEqU/XKuh57y7tUDr7zIRprfC24Ifw5Ep0aboCg=";
+      name = "SQUID-2023_2_c.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_2_c.patch";
+      hash = "sha256-00000000";
     })
     (fetchpatch {
-      name = "CVE-2023-46724.patch";
-      url = "http://www.squid-cache.org/Versions/v5/SQUID-2023_4.patch";
-      hash = "sha256-Ptt/yweUmB3lfg/o3mdBIjzpntCkRR9wDruQNYJifmE=";
+      name = "SQUID-2023_3.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_3.patch";
+      hash = "sha256-00000000";
     })
     (fetchpatch {
-      name = "CVE-2023-46846.patch";
-      url = "http://www.squid-cache.org/Versions/v5/SQUID-2023_1.patch";
-      hash = "sha256-Tu8oJTlYleKlZPfD3rslNfkLVcB8sjp25+N/9S423+8=";
+      name = "SQUID-2023_4.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_4.patch";
+      hash = "sha256-00000000";
+    })
+    (fetchpatch {
+      name = "SQUID-2023_5.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_5.patch";
+      hash = "sha256-0000000000";
+    })
+    (fetchpatch {
+      name = "SQUID-2023_7.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_7.patch";
+      hash = "sha256-0000000000";
+    })
+    (fetchpatch {
+      name = "SQUID-2023_8.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_8.patch";
+      hash = "sha256-0000000000";
+    })
+    (fetchpatch {
+      name = "SQUID-2023_10.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_10.patch";
+      hash = "sha256-0000000000";
+    })
+    (fetchpatch {
+      name = "SQUID-2023_11.patch";
+      url = "https://www.squid-cache.org/Versions/v6/SQUID-2023_11.patch";
+      hash = "sha256-0000000000";
     })
   ];
 
